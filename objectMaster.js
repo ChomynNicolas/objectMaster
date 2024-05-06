@@ -24,7 +24,27 @@ const pokemon = Object.freeze([
   { id: 148, name: "Dragonair", types: ["dragon"] },
 ]);
 
+//id divisible por 3
 
+const idDivThree = pokemon.filter((e)=> e.id%3===0);
+console.log(idDivThree);
+
+//tipos fuego
+
+const tipoFuego = pokemon.filter((e)=> e.types.includes("fire"))
+console.log(tipoFuego);
+
+//mas de un tipo
+
+const moreTypes = pokemon.filter((e)=> e.types.length > 1)
+console.log(moreTypes);
+
+//solo nombres
+
+const nombrePokemons = pokemon.map((e)=>{
+  return e.name;
+})
+console.log(nombrePokemons);
 
 
 
