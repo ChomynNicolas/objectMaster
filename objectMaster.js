@@ -46,10 +46,27 @@ const nombrePokemons = pokemon.map((e)=>{
 })
 console.log(nombrePokemons);
 
+//solo nombres e id mayor a 99
 
+const nombrePokemonsMayorid = pokemon.filter((e)=>e.id>99).map((e)=>e.name)
 
+console.log(nombrePokemonsMayorid);
 
+//una matriz solo con nombres de los que solo tengan tipo veneno
 
+const tipoVen = pokemon.filter((e)=>e.types.length===1 && e.types.includes("poison")).map((e)=>e.name
+)
+console.log(tipoVen);
 
+//matriz con el primer tipo de todos cuyo segundo tipo es volador
 
+const primerTipo = pokemon.filter((e)=>e.types.includes("flying")).map((e)=> e.types[0])
+
+console.log(primerTipo);
+
+//recuento normales
+var count;
+const cont = pokemon.filter((e)=>e.types.includes('normal'));
+
+console.log(cont.length);
 
